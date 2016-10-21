@@ -1,0 +1,128 @@
+body {
+    color:#000;
+    line-height: 1.5em;
+    font-family: Arial;
+    font-size: 16px;
+    overflow-y:scroll;
+
+}
+
+.page {
+    clear:both;
+    max-width: 980px;
+    margin: 0 auto 0 auto;
+    position: relative;
+    background-color: #fff;
+    overflow-y:scroll;
+}
+
+
+#pylBanner{
+              background:#0B0B61; color:#fff;
+}
+
+#draftBanner{
+              background:#0B0B61; color:#fff;
+}
+
+.sponsor{overflow-y:scroll; margin: 0 auto 0 auto; color: #0B0B61;}
+
+.sponsorTop{ color:green;
+}
+
+.exhibitNote{color:#0B0B61; font-weight:bold;}
+
+
+h1 {
+    font-size: 5em; font-weight: normal; color: #a6430a; margin: 30px 0 .5em 0;
+}
+
+h2{
+    font-size: 1.7em; margin: 0 0 1em 0;
+}
+
+h3{
+    font-size: 1.5em; margin: 0 0 1em 0; 
+}
+
+p{
+    margin: 0 0 .75em 0;
+}
+
+a{
+    color: #000;
+}
+
+a:hover {
+    color: #009eff;
+}
+
+footer{
+    font-size: .85em; color:#fff; background-color:#575c7a; padding: 10px 10px 10px 0; width:90%; position:absolute; bottom:0; left:0;
+}
+
+#footer{
+    font-size: .85em; color:#fff; background-color:#575c7a; padding: 10px 0 10px 0; width:100%; position:absolute fixed; bottom:0; left:0; margin:0px;
+}
+
+a.cta{
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: bold;
+    text-decoration: none;
+    margin: .5em 0 0 0;
+    padding: 0 12px 0 0;
+    background: url("/img/cta_arrow.png") no-repeat right 0px;
+}
+
+a.cta:hover{ background: url("/img/cta_arrow_hover.png")  no-repeat right 0px; }
+
+.promo p{line-height: 1.2em; font-size: .9em; margin-bottom: .5em;}
+
+.promo { background-repeat: no-repeat;}
+.promo.one{background-image:url("/img/promo1.jpg");}
+.promo.two{background-image:url("/img/promo1.jpg");}
+.promo.three{background-image:url("/img/promo1.jpg");}
+
+nav a{
+    color:#fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: .9em;
+}
+
+nav a:hover{    color:#fff; background-color:#424242;}
+
+#topBar a{
+    color:#ffffff; 
+    text-decoration: none; 
+    text-transform: uppercase;
+    display:inline-block;
+    font-weight:bold;
+    font-size: .9em;
+}
+
+#topBarLow a:hover{
+    color:#fff; background-color:#424242;
+}
+
+#topBarLow a{
+    color:#ffffff; 
+    text-decoration: none; 
+    text-transform: uppercase;
+    display:inline-block;
+    font-weight:bold;
+    font-size: .9em;
+}
+
+#topBar a:hover{
+    color:#fff; background-color:#424242;
+}
+.clear-fix{    clear:both;    line-height:1px;}
+
+
+ul {
+    list-style-position: inside;
+}

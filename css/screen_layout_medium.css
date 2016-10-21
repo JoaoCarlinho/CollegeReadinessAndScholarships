@@ -1,0 +1,155 @@
+/*  medium  */
+
+
+
+body {
+    margin:0; padding:0;
+}
+
+.page{
+    height:700px;
+}
+
+.formBox{margin:80px auto 0 auto;
+}
+
+#page2{
+     background: url("/img/bookLine.jpg") repeat-x 0px 0px;     max-width: 980px;    height:500px; background-size:cover;
+}
+
+header{
+    height:200px; background:url("/img/smile_medium.jpg") no-repeat 90% 9px; margin:30px auto 0 auto;
+}
+
+#draftHeader{
+    height:200px;
+    margin:60px auto 0 auto;
+    background: url("/img/smil_mediume.jpg") no-repeat right 90% 9px;
+    background-position:center;
+    background-size:cover;
+}
+
+header a.logo {
+    width:115px;
+    height:70px;
+    top:28px;
+    right:20px;
+    background-image: url("/img/cover_medium_logo.jpg");
+}
+
+#draftHeader a.logo{
+    position:absolute;
+    background-repeat: no-repeat;
+    width:115px;
+    height:70px;
+    top:80px;
+    right:0px;
+    background-image: url("/img/cover_medium_logo.jpg");
+}
+
+#pylBanner{ padding:25px; margin:0 auto 0 auto; font-size:30px;
+}
+
+#draftBanner{
+            padding:25px; margin:60px auto 0 auto; font-size:30px;
+}
+
+#pylBSP{
+        font-size: 14px;
+}
+
+#draftBSP{
+        font-size: 14px;
+}
+
+.exhibitNote{
+            padding:25px; margin:0 auto 0 auto; font-size:2em; padding:5px; 
+}
+
+.sponsorTop{ font-size:2em; 
+}
+
+#aboutIndex{
+             font-size:.8em;
+}
+
+#readMore{
+          border:3px solid green; border-radius:10px; height:20px; width:100px; padding: 5px;   
+}
+
+.sponsor{font-size:1.13em; padding:5px; overflow:hidden;}
+
+.chapter{font-size:1em;}
+
+nav{ top:200px; }
+
+nav a {margin-right: 20px;}
+#topBar a {margin-right: 20px;}
+
+#topBarLow a {margin-right: 20px;}
+
+
+article {
+    padding: 10px 20px 10px 20px;
+}
+
+.promo_container {
+    padding: 0 20px 15px 20px;
+}
+
+.promo_container .promo{
+    background-position: 0 0px;
+}
+
+.promo_container .promo .content{
+    padding: 100px 30px 0 0px;
+}
+
+body{background-image:none;}
+
+form {
+  background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 650px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+input {
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.styledSelect select {
+   
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border-color:#000;
+   border-radius: 1px;
+   height: 34px;
+   }

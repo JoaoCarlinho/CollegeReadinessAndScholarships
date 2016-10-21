@@ -1,0 +1,203 @@
+/* large */
+
+
+body {
+    margin:0; padding:0;
+}
+
+.formBox{margin:20px auto 0 auto;
+}
+
+.page{
+   height:700px;
+}
+
+#page2{    background: url("/img/bookLine.jpg") repeat-x 0px 0px;     max-width: 980px;    height:500px; background-size:cover;
+}
+
+#pylBanner{
+            padding:25px; margin:0 auto 0 auto; font-size:42px;
+}
+
+#draftBanner{
+            padding:25px; margin:15px auto 0 auto; font-size:42px;
+}
+
+.exhibitNote{
+            padding:25px; margin:0 auto 0 auto; font-size:3em; padding:5px; 
+}
+
+.sponsorTop{ font-size:3em; 
+}
+
+#pylBSP{
+        font-size: 16px;
+}
+
+#draftBSP{
+        font-size: 16px;
+}
+
+#aboutIndex{
+             font-size:1.13em;
+}
+
+#readMore{
+          border:3px solid green; border-radius:10px; height:20px; width:100px; padding: 5px;   
+}
+
+.sponsor{font-size:1.5em; padding:5px; overflow:hidden;}
+
+.chapter{font-size:1.14em;}
+
+
+#exhibitor{
+               background: url("/img/bookLineArt.png") repeat-x 0px 0px;
+}
+
+
+header a.logo{
+    display:block;
+    position:absolute;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+header{
+    height:275px;
+    background: url("/img/smile.jpg") no-repeat right 0px;
+    background-position:center;
+    background-size:cover;
+}
+
+header a.logo {
+    width:150px;
+    height:85px;
+    top:28px;
+    right:30px;
+    background-image: url("/img/book_cover.jpg");
+}
+
+#draftHeader a.logo{
+    position:absolute;
+    background-repeat: no-repeat;
+    width:150px;
+    height:85px;
+    top:50px;
+    right:30px;
+    background-image: url("/img/book_cover.jpg");
+}
+
+#draftHeader{
+    height:275px;
+    margin:20px auto 0 auto;
+    background: url("/img/smile.jpg") no-repeat right 0px;
+    background-position:center;
+    background-size:cover;
+}
+
+nav{
+    width:100%;
+    display:block;
+    position:absolute;
+    color:#fff;
+    background-color: #848484;
+}
+
+
+#topBar{
+    width:100%;
+    background-color: #848484;
+    position:absolute;
+    display:block;
+}
+
+#topBarLow{
+    width:100%;
+    background-color: #848484;
+    position:absolute;
+    display:block;
+}
+
+.promo_container {
+    padding: 0 0 15px 20px;
+}
+
+.promo_container .promo{
+    width: 33%;
+    float:left;
+    background-position: 0 3px;
+}
+
+.promo_container .promo .content{
+    padding: 0 30px 0 70px;
+}
+
+nav {    top:275px;}
+
+#topBar {    top:0px;}
+
+#topBarLow {    top:0px;}
+nav a{    margin: 12px 0px 10px 20px;}
+#topBar a{    margin: 12px 0px 10px 20px;}
+#topBarLow a{    margin: 12px 0px 10px 20px;}
+
+#midImage{
+    clear:left;
+    width:70%;
+    height:300px;
+    background-image:url("/img/centerImage.png"); 
+    position:absolute;
+    top:200px;
+    left:100px;
+    background-size:100%;
+    background-repeat: no-repeat;
+    
+}
+
+form {
+  background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin: auto;
+  position: relative;
+  width: 550px;
+  height: 650px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+input {
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.styledSelect select {
+   
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border-color:#000;
+   border-radius: 1px;
+   height: 34px;
+   }
