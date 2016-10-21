@@ -1,8 +1,8 @@
 <?php /****************************************registered.php    Student Registration Confirmation***********************************************************************************************************/
- require_once('connectDraft.php');
+ require('connect.php');
 $db = connect();
 
-/********************************************* Section for Tests before Inserting a new Group into the Directory***************************************************      **/
+/********************************************* Section for Tests before Inserting a new Student into the Directory***************************************************      **/
         if(isset($_GET['passCode']) && isset($_GET['studentFirstName']) && isset($_GET['studentLastName']) && isset($_GET['studentEmail'])&& isset($_GET['contactEmail']) && isset($_GET['gradeLevel'])){
             $passCode = $_GET['passCode'];
             $studentFirstName = $_GET['studentFirstName'];
@@ -20,7 +20,7 @@ $db = connect();
 
 /***************************************determine if there is an group stored with same passCode and contactEmail*******************************************/
 /*************************          Extract group id from groups table and use it to store in student table *********************************/      
-        $query = $db->prepare("SELECT * FROM groups WHERE contactEmail = '$contactEmail' AND passCode = '$passCode'") or die("could not search groups");
+            $query = $db->prepare("SELECT * FROM groups WHERE contactEmail = '$contactEmail' AND passCode = '$passCode'") or die("could not search groups");
             $query->execute();
             $row = $query->fetchAll(PDO::FETCH_ASSOC);
             $count = count($row);
@@ -36,52 +36,31 @@ $db = connect();
             header("Location: index.php?message=$message");
         }else{
 
-        
-        //add new student to group and send email confirmations
-         $query = $db->prepare("INSERT INTO students (groupID, studentFirstName, studentLastName, studentEmail, gradeLevel) VALUES( ?, ?, ?, ?, ?)") or die("could not search");
-             $query->execute(array($groupID, $studentFirstName, $studentLastName, $studentEmail, $gradeLevel));
-
-                $db = null;?>            
-            
-            <!DOCTYPE HTML>
-<html>
-    <!--*******************************************gc.php(registration index)***********************************************************-->
-    <?php include '../head.php';?>
-
-    <body>
-    
-        <div class="page">
-            <?php include'../topBar.php';?>
-            <div id="exhibitor">
-                <div style="margin: 80px auto 0 auto;">
-                 <br/>
-                           <center>Successful Student Registration!</center>                            
-                </div>
-                <center><?php
-/***************************************Message for registration confirmation*******************************************/
-                echo"You have registered a student under your name!<br/>
-                 ". $studentFirstName ." ". $studentLastName . " is on the list!<br/>
-          	If you have any general questions or concerns, please give us a call at<br/> 
-          	614-256-9488 or email us a FreeRidetoCollege@gmail.com.
-                <br/><br/>"; ?></center>
-                
-                <br/>
-                <br/>
-                                    
-<center><a href="/students/index.php?passCode=<?php echo $passCode ?>&contactEmail=<?php echo $contactEmail ?>"><button type="button">Register another Child</button></a></center>
-<br/>
-<br/>
-                <br/>
-                <br/>
-                <?php include '../footer.php'; ?>
-            </div>
-        </div>
-    </body>
-</html>
-  
-                
-
-<?php
+/***************************************Make sure email submitted for student isn't already in use*****************/        
+            $query = $db->prepare("SELECT studentID FROM studetns WHERE studentEmail = '$studentEmail'") or die("could not search groups");
+            $query->execute();
+            $row = $query->fetchAll(PDO::FETCH_ASSOC);
+            $count = count($row);
+            //read each returned item's info
+             foreach($row as $info){
+	        //put items into a basket for use today    
+	            $repeat=$info['studentEmail'];;
+             } 
+             
+             if($count > 0){
+                //a student already registered with this email address  
+                $message = 'A student has already registered with the email you submitted!';
+                header("Location: index.php?message=$message");
+                }else{
+       
+       
+                    //add new student to group and send email confirmations
+                     $query = $db->prepare("INSERT INTO students (groupID, studentFirstName, studentLastName, studentEmail, gradeLevel) VALUES( ?, ?, ?, ?, ?)") or die("could not search");
+                         $query->execute(array($groupID, $studentFirstName, $studentLastName, $studentEmail, $gradeLevel));
+                }
+                            $db = null;
+                            
+                include('studentRegisteredView.php');
 
 /***************************************Email confirmation with passCode**************************************/  
             $email_from = "FreeRidetoCollege@gmail.com";

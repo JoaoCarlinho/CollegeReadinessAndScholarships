@@ -1,6 +1,7 @@
 <?php  /****   newGroup.php *****************************************************************************************/
 //If all these are set, enter them into the database and go to registered.php
 
+
 if(isset($_POST['groupCount'])){
     $groupCount = $_POST['groupCount'];
 }else{
@@ -32,28 +33,16 @@ if(isset($_POST['contactMobile'])){
     $contactMobile = '3';
 }
 
-if(isset($_POST['affiliateType'])){
-    $affiliateType = $_POST['affiliateType'];
-}else{
-    $affiliateType = 'field left blank';
-}
-
 if(isset($_POST['affiliateName'])){
     $affiliateName = $_POST['affiliateName'];
 }else{
     $affiliateName = 'field left blank';
 }
 
-if(isset($_POST['affiliateCity'])){
-    $affiliateCity = $_POST['affiliateCity'];
+if(isset($_POST['zipCode'])){
+    $zipCode = $_POST['zipCode'];
 }else{
-    $affiliateCity = 'field left blank';
-}
-
-if(isset($_POST['affiliateState'])){
-    $affiliateState = $_POST['affiliateState'];
-}else{
-    $affiliateState = 'Ohio';
+    $zipCode = 'field left blank';
 }
 
 ?>
@@ -78,15 +67,24 @@ if(isset($_POST['affiliateState'])){
                     Number of Students:'.$groupCount.'<br/>
                     Email:'.$contactEmail.'<br/>
                     Mobile: '.$contactMobile.'<br/>
-                    Representing: '.$affiliateName.' '.$affiliateType.'<br/>
-                    From: '.$affiliateCity.' '.$affiliateState.'<br/><br/>');
+                    Representing: '.$affiliateName.'<br/>
+                    From: '.$zipCode.'<br/><br/>');
                     
                     echo('Confirm new group info before submission<br/>
                           If you are redirected to the previous page<br/>
                           You have entered an invalid email address<br/>');
 ?>
-                            <a href="registered.php?groupCount=<?php echo $groupCount ?>&contactFirstName=<?php echo $contactFirstName ?>&contactLastName=<?php echo $contactLastName ?>&contactEmail=<?php echo $contactEmail ?>&contactMobile=<?php echo $contactMobile ?>&affiliateType=<?php echo $affiliateType ?>&affiliateName=<?php echo $affiliateName ?>
-                            &affiliateCity=<?php echo $affiliateCity ?>&affiliateState=<?php echo $affiliateState ?>"><button type="button ">Submit Registration</button></a>
+                            <form action="registered.php" method="post">                       
+                                <input  type="hidden" name="groupCount" value="<?php echo $groupCount; ?>" />
+                                <input  type="hidden" name="contactFirstName" value="<?php echo $ContactFirstName; ?>" /> 
+                                <input  type="hidden" name="contactLastName" value="<?php echo $ContactLastName; ?>" /> 
+                                <input  type="hidden" name="contactEmail" value="<?php echo $contactEmail; ?>"/>
+                                <input  type="hidden" size"10" name="contactMobile" value="<?php echo $contactMobile; ?>"/>  
+                                <input  type="hidden" name="affiliateName" value="<?php echo $affiliateName; ?>"/>
+                                <input  type="hidden"  name="zipCode" value="<?php echo $zipCode; ?>"/>
+                                
+                                <input type="submit" value="Submit Registration">
+                            </form>
                 </div>
                         <div>
                             <a href="/" ><button type="button ">Cancel</button></a>

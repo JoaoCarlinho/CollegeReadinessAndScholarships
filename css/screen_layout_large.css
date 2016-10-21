@@ -1,27 +1,40 @@
 /* large */
 
 
-body {
-    margin:0; padding:0;
+.appBar{ display:block;
 }
+
+.app_logo{
+        font-size:25px; vertical-align:middle;
+        height:55px; line-height:55px; margin:0 0 0 20px; float:left;
+}
+
+
+.appBar ul li{  display:inline; margin: 0 0 0 10px; /*float:left; */
+        
+}
+
+/* Hide the list item that contains the link that should open and close the appLink on small screens */
+ul.appLink li.icon {display: none;}
 
 .formBox{margin:20px auto 0 auto;
-}
-
-.page{
-   height:700px;
-}
-
-#page2{    background: url("/img/bookLine.jpg") repeat-x 0px 0px;     max-width: 980px;    height:500px; background-size:cover;
 }
 
 #pylBanner{
             padding:25px; margin:0 auto 0 auto; font-size:42px;
 }
 
-#draftBanner{
-            padding:25px; margin:15px auto 0 auto; font-size:42px;
+.banner{
+         font-size:42px;
 }
+
+.smtm{ max-width: 800px;    height:1020px;
+}
+
+.bookLine{ max-width: 980px;    height:450px;
+}
+
+
 
 .exhibitNote{
             padding:25px; margin:0 auto 0 auto; font-size:3em; padding:5px; 
@@ -105,20 +118,6 @@ nav{
 }
 
 
-#topBar{
-    width:100%;
-    background-color: #848484;
-    position:absolute;
-    display:block;
-}
-
-#topBarLow{
-    width:100%;
-    background-color: #848484;
-    position:absolute;
-    display:block;
-}
-
 .promo_container {
     padding: 0 0 15px 20px;
 }
@@ -132,15 +131,6 @@ nav{
 .promo_container .promo .content{
     padding: 0 30px 0 70px;
 }
-
-nav {    top:275px;}
-
-#topBar {    top:0px;}
-
-#topBarLow {    top:0px;}
-nav a{    margin: 12px 0px 10px 20px;}
-#topBar a{    margin: 12px 0px 10px 20px;}
-#topBarLow a{    margin: 12px 0px 10px 20px;}
 
 #midImage{
     clear:left;

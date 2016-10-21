@@ -7,7 +7,7 @@
      </head>
     <body>
         <div class="page">
-            <?php include '../topBarLow.php'; ?>
+            <?php include '../appBar.php'; ?>
             <div id="draftHeader">
                 <a class="logo" href="#"></a>
             </div>

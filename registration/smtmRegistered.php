@@ -3,16 +3,14 @@ require_once('connectDraft.php');
 $db = connect();
 
 /********************************************* Section for Tests before Inserting a new group into the Directory***************************************************      **/
-        if(isset($_GET['contactMobile']) && isset($_GET['contactFirstName']) && isset($_GET['contactLastName']) && isset($_GET['contactEmail']) && isset($_GET['groupCount']) && isset($_GET['affiliateType']) && isset($_GET['affiliateName']) && isset($_GET['affiliateCity']) && isset($_GET['affiliateState'])){
-            $groupCount = $_GET['groupCount'];
-            $contactFirstName = $_GET['contactFirstName'];
-            $contactLastName = $_GET['contactLastName'];
-            $contactMobile = $_GET['contactMobile'];
-            $contactEmail = $_GET['contactEmail'];
-            $affiliateType = $_GET['affiliateType'];
-            $affiliateName = $_GET['affiliateName'];
-            $affiliateCity = $_GET['affiliateCity'];
-            $affiliateState = $_GET['affiliateState'];
+        if(isset($_POST['contactMobile']) && isset($_POST['contactFirstName']) && isset($_POST['contactLastName']) && isset($_POST['contactEmail']) && isset($_POST['groupCount']) && isset($_POST['affiliateName']) && isset($_POST['zipCode'])){
+            $groupCount = $_POST['groupCount'];
+            $contactFirstName = $_POST['contactFirstName'];
+            $contactLastName = $_POST['contactLastName'];
+            $contactMobile = $_POST['contactMobile'];
+            $contactEmail = $_POST['contactEmail'];
+            $affiliateName = $_POST['affiliateName'];
+            $zipCode = $_POST['zipCode'];
             $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
             if(!preg_match($email_exp , $contactEmail)) {
     			$message = 'You were redirected because of an invalid email submission!';
@@ -29,7 +27,7 @@ $db = connect();
                                             $message = 'A registered group is already using the email you submitted.';
                                             header("Location: index.php?message=$message");
                             }else{
-                                        //create passCode
+                                        //create acitivationDigest
                                         $length = 10;
                                         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
                                         $charactersLength = strlen($characters);
@@ -39,8 +37,8 @@ $db = connect();
                                         }
                             
                             //add new group to directory and send email confirmation
-                             $query = $db->prepare("INSERT INTO groups (groupCount, contactFirstName, contactLastName, contactEmail, contactMobile, affiliateType, affiliateName, affiliateCity, affiliateState, passCode) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)") or die("could not search");
-                                 $query->execute(array($groupCount, $contactFirstName, $contactLastName, $contactEmail, $contactMobile, $affiliateType, $affiliateName, $affiliateCity, $affiliateState, $randomString));
+                             $query = $db->prepare("INSERT INTO groups (groupCount, contactFirstName, contactLastName, contactEmail, contactMobile, affiliateName, zipCode, activationDigest) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)") or die("could not search");
+                                 $query->execute(array($groupCount, $contactFirstName, $contactLastName, $contactEmail, $contactMobile, $affiliateName, $zipCode, $randomString));
                     
                                     $db = null;?>            
                                 
@@ -86,7 +84,12 @@ $db = connect();
                                     <br/>
                                     <br/>
                                     
-<center><a href="/students/index.php?passCode=<?php echo $randomString ?>&contactEmail=<?php echo $contactEmail ?>"><button type="button">Register your Child</button></a></center>
+<center><a href="/students/index.php?passCode=<?php echo $randomString ?>&contactEmail=<?php echo $contactEmail ?>"><button type="button">Register your Students</button></a></center>
+                                    <form action="../students/.php" method="post">                       
+                                        <input  type="hidden" name="groupCount" value="<?php echo $groupCount; ?>" />
+                                        <input  type="hidden" name="contactFirstName" value="<?php echo $ContactFirstName; ?>" /> 
+                                    <input type="submit" value="Submit Registration">
+                                </form>
 <br/>
 <br/>
                                     <?php include '../footer.php'; ?>

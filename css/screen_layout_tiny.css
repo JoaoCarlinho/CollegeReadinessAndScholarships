@@ -1,19 +1,32 @@
-/* small */
+/* tiny */
 
-.appBar{ display:block; font-size: 30px; 
+.appBar{ display:block; font-size: 20px;
 }
 
 .app_logo{
        margin:0 auto 0 auto; display:block;
 }
 
-.appBar ul li{  display: block; margin: 20px auto 0 auto; border-radius:10px;
+.head_links{  margin:0 auto 0 auto;
         
 }
 
+.appBar ul li{  display: block; margin: 20px auto 0 auto;
+        
+}
 
-#page2{
-    background: url("/img/bookLineSmall.png") repeat-x 0px 0px;     max-width: 980px;    height:500px;
+.smtm{ max-width: 300px;    height:385px;
+}
+
+.banner{
+         font-size:30px;
+}
+
+.bookLine{ max-width: 350px;    height:300px;
+}
+
+.bannerWords{
+    max-width: 320px;
 }
 
 header a.logo {
@@ -21,11 +34,6 @@ header a.logo {
     height:0px;
     top:16px;
     right:15px;
-    
-}
-
-#draftHeader{
-    height: 0px;
 }
 
 header a.logo {
@@ -33,7 +41,6 @@ header a.logo {
     height:0px;
     top:16px;
     right:15px;
-    
 }
 
 #draftHeader a.logo{
@@ -41,27 +48,13 @@ header a.logo {
     height:0px;
     top:16px;
     right:15px;
-    
 }
 
 #pylBanner{ padding:25px; margin:0 auto 0 auto; font-size:30px;
 }
 
 
-.smtm{ max-width: 500px;    height:640px;
-}
 
-.banner{
-         font-size:30px;
-}
-
-
-
-.bookLine{ max-width: 350px;    height:300px;
-}
-.bannerWords{
-    max-width: 330px;
-}
 #pylBSP{
         font-size: 14px;
 }
@@ -71,6 +64,8 @@ header a.logo {
 }
 
 article{display:block;}
+
+
 
 #pylBanner{ padding:25px; margin:0 auto 0 auto; font-size:20px;
 }

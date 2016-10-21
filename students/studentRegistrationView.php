@@ -1,13 +1,3 @@
-<?php
-if(isset($_GET['message'])){
-    $message = $_GET['message'];
-    $color = 'red';
-}else{
-    $message = 'Student Registration';
-    $color = 'black';
-} ?>
-
-
 <!DOCTYPE HTML>
 <html>
 <!--*******************************************stuCreation.php(student registration index)***********************************************************-->
@@ -18,13 +8,14 @@ if(isset($_GET['message'])){
         <div class="page">
             <?php include'../appBar.php';?>
             <div id="exhibitor">
+/****************************************make sure to include table of students already registered to prevent redundancy*****************/
                 <div class="formBox">
                  <br/>
                            <center><font color="<?php echo($color) ?>"><?php echo($message) ?></font></center>                            
                 </div>
-                <center><form action="#" method="post">
-                    <input  type="email" name="contactEmail" placeholder="Parent Email"  required/>
-                    <input  type="text" name="passCode" placeholder="Pass Code" autocomplete="off" required/>                       
+                <center><form action="newStu.php" method="post">
+                    <input type='hidden' name='contactEmail' value="<?php echo $contactEmail; ?>"/>
+                    <input  type='hidden' name='passCode' value = "<?php echo $passCode; ?>"/> 
                     <input  type="text" name="studentFirstName" placeholder="Student First Name" required/>
                     <input  type="text" name="studentLastName" placeholder="Student Last Name"  required/>
                     <p>Grade Level</p>

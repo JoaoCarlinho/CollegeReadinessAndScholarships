@@ -46,7 +46,7 @@ if(isset($_POST['gradeLevel'])){
     <body>
     
         <div class="page">
-            <?php include'../topBar.php';?>
+            <?php include'../appBar.php';?>
                 <div style="margin: 80px auto 0 auto;">
                  <br/>
                            <center>Student Registration confirmation</center>                            
@@ -62,9 +62,16 @@ if(isset($_POST['gradeLevel'])){
                     echo('Confirm new student info before submission<br/>');
                     ?>
                     <div>
-                        <a href="registered.php?passCode=<?php echo $passCode ?>&contactEmail=<?php echo $contactEmail ?>&studentFirstName=<?php echo $studentFirstName ?>&studentLastName=<?php echo $studentLastName ?>&studentEmail=<?php echo $studentEmail ?>&gradeLevel=<?php echo $gradeLevel ?>">
-                            <button type="button ">Submit Registration</button>
-                        </a>
+                        <form action="registered.php" method="post">                       
+                            <input  type="hidden" name="contactEmail" value="<?php echo $groupCount; ?>" />
+                            <input  type="hidden" name="passCode" value="<?php echo $passCode; ?>" />
+                            <input  type="hidden" name="studentFirstName" value="<?php echo $studentFirstName; ?>" />
+                            <input  type="hidden" name="studentLastName" value="<?php echo $studentLastName; ?>" />
+                            <input  type="hidden" name="studentEmail" value="<?php echo $studentEmail; ?>" />
+                            <input  type="hidden" name="gradeLevel" value="<?php echo $gradeLevel; ?>" /> 
+                            
+                            <input type="submit" value="Submit Registration">
+                        </form>
                     </div>
                     <div>
                         <a href="/" ><button type="button ">Cancel</button></a>

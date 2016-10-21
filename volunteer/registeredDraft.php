@@ -42,7 +42,7 @@ $db = connect();
     <body>
     
         <div class="page">
-            <?php include'../topBar.php';?>
+            <?php include'../appBar.php';?>
             <div id="exhibitor">
                 <div style="margin: 80px auto 0 auto;">
                  <br/>

@@ -8,7 +8,7 @@
     
     <body>
         <div class="page">
-            <?php include '../topBar.php';?>
+            <?php include '../appBar.php';?>
             <header>
                 <a class="logo" href="#"></a>
             </header>

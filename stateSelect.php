@@ -1,47 +1,4 @@
-<?php  /****   groupCreation.php *****************************************************************************************/
-//If all these are set, enter them into the database and go to newGroup.php
-
-if(isset($_GET['message'])){
-    $message = $_GET['message'];
-    $color = 'red';
-}else{
-    $message = 'Parent Registration';
-    $color = 'black';
-} ?>
-
-<!DOCTYPE HTML>
-<html>
-<!--*******************************************gc.php(registration index)***********************************************************-->
-    <?php include '../head.php';?>
-
-    <body>
-    
-        <div class="page">
-            <?php include'../topBar.php';?>
-            <div id="exhibitor">
-                <div class="formBox">
-                 <br/>
-                           <center><font color="<?php echo($color); ?>"><?php echo($message); ?></font></center>                            
-                </div>
-                <center><form action="#" method="post">                       
-                    <input  type="number" name="groupCount" placeholder="Number of Students" autocomplete="off" required/>
-                    <input  type="text" name="contactFirstName" placeholder="First name" autocomplete="off" required/> 
-                    <input  type="text" name="contactLastName" placeholder="Last name" autocomplete="off" required/> 
-                    <input  type="email" name="contactEmail" placeholder="Email" autocomplete="off" required/>
-                    <p>10 digit number without dashes(xxxxxxxxxx)</p>
-                    <input  type="number" size"10" name="contactMobile" placeholder="Contact Mobile Phone" required/>  
-                    <p>Type of School</p>
-                    <div class="styledSelect">
-                        <select id="affiliateType" name="affiliateType">
-                            <option value="Middle School">Middle School</option>
-                            <option value="High School">High School</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div><br/>
-                    <input  type="text" name="affiliateName" placeholder="School Name" autocomplete="off"/>
-                    <input  type="text" name="affiliateCity" placeholder="Home City" autocomplete="off"/>
-                    <p>Home State</p>
-                    <div class="styledSelect">
+<div class="styledSelect">
                         <select id="affiliateState" name="affiliateState">
                         <option value="AL">Alabama</option>
                         	<option value="AK">Alaska</option>
@@ -95,13 +52,4 @@ if(isset($_GET['message'])){
                         	<option value="WI">Wisconsin</option>
                         	<option value="WY">Wyoming</option>
                         </select>
-                    </div><br/><br/>
-                    <input type="submit" value="Submit" />
-                </form></center>
-                <br/>
-                <br/>
-                <?php include '../footer.php'; ?>
-            </div>
-        </div>
-    </body>
-</html>
+                    </div>

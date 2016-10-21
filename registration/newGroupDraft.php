@@ -66,7 +66,7 @@ if(isset($_POST['affiliateState'])){
     <body>
     
         <div class="page">
-            <?php include'../topBar.php';?>
+            <?php include'../appBar.php';?>
                <div style="margin: 80px auto 0 auto;">
                  <br/>
                            <center>Parent Registration confirmation</center>                            

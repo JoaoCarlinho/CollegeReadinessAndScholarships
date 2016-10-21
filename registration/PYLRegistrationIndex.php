@@ -1,5 +1,5 @@
-<?php  /****   index.php *****************************************************************************************/
-
+<?php  /****   groupCreation.php *****************************************************************************************/
+//If all these are set, enter them into the database and go to newGroup.php
 
 if(isset($_GET['message'])){
     $message = $_GET['message'];
@@ -11,7 +11,7 @@ if(isset($_GET['message'])){
 
 <!DOCTYPE HTML>
 <html>
-<!--*******************************************groupCreation.php(registration index)***********************************************************-->
+<!--*******************************************gc.php(registration index)***********************************************************-->
     <?php include '../head.php';?>
 
     <body>
@@ -19,17 +19,17 @@ if(isset($_GET['message'])){
         <div class="page">
             <?php include'../appBar.php';?>
             <div id="exhibitor">
-                <div style="margin: 80px auto 0 auto;">
+                <div class="formBox">
                  <br/>
                            <center><font color="<?php echo($color); ?>"><?php echo($message); ?></font></center>                            
                 </div>
-                <center><form action="newGroupDraft.php" method="post">                       
-                    <input  type="number" name="groupCount" placeholder="Number of Students" autocomplete="off" required/><br/>
-                    <input  type="text" name="contactFirstName" placeholder="First name" autocomplete="off" required/><br/> 
-                    <input  type="text" name="contactLastName" placeholder="Last name" autocomplete="off" required/><br/> 
-                    <input  type="email" name="contactEmail" placeholder="Email" autocomplete="off" required/><br/>
+                <center><form action="#" method="post">                       
+                    <input  type="number" name="groupCount" placeholder="Number of Students" autocomplete="off" required/>
+                    <input  type="text" name="contactFirstName" placeholder="First name" autocomplete="off" required/> 
+                    <input  type="text" name="contactLastName" placeholder="Last name" autocomplete="off" required/> 
+                    <input  type="email" name="contactEmail" placeholder="Email" autocomplete="off" required/>
                     <p>10 digit number without dashes(xxxxxxxxxx)</p>
-                    <input  type="number" size"10" name="contactMobile" placeholder="Contact Mobile Phone" required/><br/>  
+                    <input  type="number" size"10" name="contactMobile" placeholder="Contact Mobile Phone" required/>  
                     <p>Type of School</p>
                     <div class="styledSelect">
                         <select id="affiliateType" name="affiliateType">
@@ -38,8 +38,8 @@ if(isset($_GET['message'])){
                             <option value="Other">Other</option>
                         </select>
                     </div><br/>
-                    <input  type="text" name="affiliateName" placeholder="School Name" autocomplete="off"/><br/>
-                    <input  type="text" name="affiliateCity" placeholder="Home City" autocomplete="off"/><br/>
+                    <input  type="text" name="affiliateName" placeholder="School Name" autocomplete="off"/>
+                    <input  type="text" name="affiliateCity" placeholder="Home City" autocomplete="off"/>
                     <p>Home State</p>
                     <div class="styledSelect">
                         <select id="affiliateState" name="affiliateState">

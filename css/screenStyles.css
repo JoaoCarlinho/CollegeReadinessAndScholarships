@@ -1,0 +1,186 @@
+/*  Screen Styles   */
+
+
+container {
+    color:#000;
+    line-height: 1.5em;
+    font-family: Arial;
+    font-size: 16px;
+    overflow-y:hidden scroll;
+    white-space:nowrap;
+    position: relative;
+
+}
+
+.exhibitor{
+    background: url(/img/bookLineArt.png);
+}
+
+a {
+    text-decoration: none;
+}
+
+.appBar{
+        background-color:black; color:#C0C0C0; margin:0 auto 0 auto;
+}
+
+.appBar a{color:#C0C0C0;
+        
+}
+
+.appBar ul li{
+        text-decoration:none;
+        
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.appLink {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Float the list items side by side */
+ul.appLink li {float: left;} 
+
+/* Style the links inside the list items */
+ul.appLink li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.appLink li a:hover {background-color: #111;}
+
+.bookLine{
+    background:url("/img/bookLine.jpg"); background-size:cover; margin:0 auto 0 auto;
+}
+
+.smtm{
+    background:url("/img/smtm.jpg"); background-size:cover; margin:0 auto 0 auto;
+}
+
+
+
+#pylBanner{
+              background:#0B0B61; color:#fff;
+}
+
+.banner{
+              background:#0B0B61; color:#fff; margin:0 auto 0 auto;
+}
+
+.bannerWords{
+    max-width: 900px;
+}
+
+.sponsor{overflow-y:scroll; margin: 0 auto 0 auto; color: #0B0B61;}
+
+.sponsorTop{ color:green;
+}
+
+.exhibitNote{color:#0B0B61; font-weight:bold;}
+
+
+h1 {
+    font-size: 5em; font-weight: normal; color: #a6430a; margin: 30px 0 .5em 0;
+}
+
+h2{
+    font-size: 1.7em; margin: 0 0 1em 0;
+}
+
+h3{
+    font-size: 1.5em; margin: 0 0 1em 0; 
+}
+
+p{
+    margin: 0 0 .75em 0;
+}
+
+
+
+a:hover {
+    color: #009eff;
+}
+
+.footer{
+    font-size: .85em; color:#fff; background-color:#575c7a;
+}
+
+a.cta{
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: bold;
+    text-decoration: none;
+    margin: .5em 0 0 0;
+    padding: 0 12px 0 0;
+    background: url("/img/cta_arrow.png") no-repeat right 0px;
+}
+
+a.cta:hover{ background: url("/img/cta_arrow_hover.png")  no-repeat right 0px; }
+
+.promo p{line-height: 1.2em; font-size: .9em; margin-bottom: .5em;}
+
+.promo { background-repeat: no-repeat;}
+.promo.one{background-image:url("/img/promo1.jpg");}
+.promo.two{background-image:url("/img/promo1.jpg");}
+.promo.three{background-image:url("/img/promo1.jpg");}
+
+nav a{
+    color:#fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: .9em;
+}
+
+nav a:hover{    color:#fff; background-color:#424242;}
+
+.clear-fix{    clear:both;    line-height:1px;}
+
+
+ul {
+    list-style-position: inside;
+}
+
+
+
+
+
+
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the appLink (li.icon) */
+@media screen and (max-width:800px) {
+    ul.appLink li.icon {
+        float: right; 
+    
+  }
+  ul.appLink .hide {display: none;}
+}
+
+/* The "responsive" class is added to the appLink with JavaScript when the user clicks on the icon. This class makes the appLink look good on small screens */
+@media screen and (max-width:800px) {
+  ul.appLink.responsive {position: relative;}
+  ul.appLink.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.appLink.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.appLink.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}

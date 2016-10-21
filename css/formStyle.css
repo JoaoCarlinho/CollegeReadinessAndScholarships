@@ -1,7 +1,7 @@
 form {
-  background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-  background: linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background: -webkit-linear-gradient(bottom, #6f9b7d, #EEEEEE 175px);
+  background: -moz-linear-gradient(bottom, #6f9b7d, #EEEEEE 175px);
+  background: linear-gradient(bottom, #6f9b7d, #EEEEEE 175px);
   margin: auto;
   position: relative;
   width: 550px;
@@ -11,7 +11,7 @@ form {
   font-style: italic;
   line-height: 24px;
   font-weight: bold;
-  color: #09C;
+  color: #000;
   text-decoration: none;
   border-radius: 10px;
   padding: 10px;
@@ -34,20 +34,20 @@ input {
 }
 
 ::-webkit-input-placeholder {
-    color: #FF0000;
+    color: #CCCCCC;
     opacity: 1 !important; /* for chrome */
 }
 
 :-moz-placeholder { /* Firefox 18- */
-    color: #FF0000;
+    color: #CCCCCC;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-    color: #FF0000;
+    color: #CCCCCC;
 }
 
 :-ms-input-placeholder {  
-   color: #FF0000;
+   color: #CCCCCC;
 }
 
 .styledSelect select {
